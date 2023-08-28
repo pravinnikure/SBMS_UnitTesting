@@ -32,7 +32,7 @@ public class StudentRestController {
 	public ResponseEntity<String> saveStudent(@RequestBody @Valid Student student) {
 
 		Integer id = service.saveStudent(student);
-		return new ResponseEntity<String>("Student'" + id + "'create", HttpStatus.OK);
+		return new ResponseEntity<String>("Student'" + id + "'created", HttpStatus.OK);
 	}
 
 	@GetMapping("/all")
