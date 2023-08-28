@@ -67,7 +67,7 @@ public class StudentRestController {
 
 			service.deleteStudent(id);
 		
-			response = new ResponseEntity<String>("Student'" + id+ "' deleted Successfully ", HttpStatus.OK);
+			response = new ResponseEntity<String>("Student'" + id+ "'deleted", HttpStatus.OK);
 
 		} catch (StudentNotFoundException snfe) {
 			snfe.printStackTrace();
@@ -81,10 +81,10 @@ public class StudentRestController {
 	{
 		ResponseEntity<String> response = null;
 		try {
-
+		
 			service.updateStudent(student);
 		
-			response = new ResponseEntity<String>("Student'" + student.getStdId() + "' updated Successfully ", HttpStatus.OK);
+			response = new ResponseEntity<String>("Student'" + student.getStdId() + "' updated", HttpStatus.OK);
 
 		} catch (StudentNotFoundException snfe) {
 			snfe.printStackTrace();
